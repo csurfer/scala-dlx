@@ -1,0 +1,7 @@
+# Directories to ignore
+project/
+target/
+.idea/
+
+# Files to ignore
+DancingLinks.iml
