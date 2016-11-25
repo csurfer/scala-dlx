@@ -7,6 +7,6 @@
 
 ## Links to different parts of the project
 - [Examples](src/main/scala/examples) of different problems. **(Start here to get a feel for the problem at hand)**
-- [DLX core](src/main/scala/dlx) consists of implementation of Classes requried to implement DLX structure, and the implementaion of AlgorithmX using DLX.
+- [DLX core](src/main/scala/dlx) consists of implementation of classes requried to implement DLX structure, and the implementaion of AlgorithmX using DLX.
 - [Problem Types](src/main/scala/problemtype) consists of different problems we can hope to solve using AlgorithmX.
 - [Utility](src/main/scala/util) functions.
