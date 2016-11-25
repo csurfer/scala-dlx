@@ -10,3 +10,6 @@
 - [DLX core](src/main/scala/dlx) consists of implementation of classes requried to implement DLX structure, and the implementaion of AlgorithmX using DLX.
 - [Problem Types](src/main/scala/problemtype) consists of different problems we can hope to solve using AlgorithmX.
 - [Utility](src/main/scala/util) functions.
+
+## Currently implemented solutions
+- Set exact cover
