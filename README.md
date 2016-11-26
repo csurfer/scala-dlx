@@ -12,7 +12,7 @@
   - Implementaion of AlgorithmX using DLX.
 - [Problem Types](src/main/scala/problemtype) consists of implementations of different problems we can solve using AlgorithmX.
   - Set exact cover
-  - 9x9 Sudoku solver
+  - 9x9 Sudoku solver (Easy and Hard)
 - [Utility](src/main/scala/util) and other generic functions.
 
 ## What to expect in future ?
