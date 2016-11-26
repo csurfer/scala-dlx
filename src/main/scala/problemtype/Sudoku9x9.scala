@@ -22,6 +22,8 @@ import dlx.DLX
   * Exact cover solution for the grid represented this way tells us which items to choose from the
   * possibilities hence solving the Sudoku grid.
   *
+  * @author Vishwas B Sharma (sharma.vishwas88@gmail.com)
+  *
   * @param grid 9x9 Sudoku grid to be solved
   */
 class Sudoku9x9(grid: Array[Array[Byte]]) {

@@ -1,6 +1,9 @@
 package util
 
-/** Object to provide utility functions helpful in mapping inputs and outputs. */
+/** Object to provide utility functions helpful in mapping inputs and outputs.
+  *
+  * @author Vishwas B Sharma (sharma.vishwas88@gmail.com)
+  */
 object MapperUtil {
 
   /** Method to check if the value is present in the array or not.
