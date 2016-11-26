@@ -7,10 +7,16 @@
 
 ## Links to different parts of the project
 - [Examples](src/main/scala/examples) of different problems. **(Start here to get a feel for the problem at hand)**
-- [DLX core](src/main/scala/dlx) consists of implementation of classes requried to implement DLX structure, and the implementaion of AlgorithmX using DLX.
-- [Problem Types](src/main/scala/problemtype) consists of different problems we can hope to solve using AlgorithmX.
-- [Utility](src/main/scala/util) functions.
+- [DLX core](src/main/scala/dlx) consists of
+  - Implementation of classes requried to implement DLX structure
+  - Implementaion of AlgorithmX using DLX.
+- [Problem Types](src/main/scala/problemtype) consists of implementations of different problems we can solve using AlgorithmX.
+  - Set exact cover
+  - 9x9 Sudoku solver
+- [Utility](src/main/scala/util) and other generic functions.
 
 ## Currently implemented solutions
-- Set exact cover
-- 9x9 Sudoku solver
+
+
+## What to expect in future ?
+- [Pentomino](https://en.wikipedia.org/wiki/Pentomino) solution using AlgorithmX once I figure out how exactly I can map the constraints.
