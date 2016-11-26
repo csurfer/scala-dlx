@@ -15,8 +15,5 @@
   - 9x9 Sudoku solver
 - [Utility](src/main/scala/util) and other generic functions.
 
-## Currently implemented solutions
-
-
 ## What to expect in future ?
 - [Pentomino](https://en.wikipedia.org/wiki/Pentomino) solution using AlgorithmX once I figure out how exactly I can map the constraints.
