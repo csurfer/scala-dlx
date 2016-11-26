@@ -12,9 +12,9 @@ package dlx.node
   * @param D Points to cell below the current cell
   * @param C Points to column header
   */
-class Column(var S: Int, var N: Byte, L: Data, R: Data, U: Data, D: Data, C:Data)
+class Column(var S: Int, var N: Int, L: Data, R: Data, U: Data, D: Data, C:Data)
     extends Data(L, R, U, D, C) {
   def this() = this(0, -1, null, null, null, null, null)
   def this(S: Int) = this(S, -1, null, null, null, null, null)
-  def this(S: Int, N: Byte) = this(S, N, null, null, null, null, null)
+  def this(S: Int, N: Int) = this(S, N, null, null, null, null, null)
 }

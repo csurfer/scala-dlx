@@ -2,13 +2,24 @@ package problemtype
 
 import dlx.DLX
 
-class ExactCover[T](U: Array[T], S: Map[String, Array[T]]) {
+/** Class to compute Exact cover for a set given the contender sets.
+  *
+  * [[https://en.wikipedia.org/wiki/Exact_cover Exact Cover]]
+  *
+  * @author Vishwas B Sharma (sharma.vishwas88@gmail.com)
+  *
+  * @param X set to cover
+  * @param S collection of subsets of set X
+  * @tparam T type of elements present in set X
+  */
+class ExactCover[T](X: Array[T], S: Map[String, Array[T]]) {
 
+  /** Method to compute the exact cover for the given set. */
   def solve() = {
-    val bitmapMatrix = ExactCover.mapInput(U, S)
+    val bitmapMatrix = ExactCover.mapInput(X, S)
     val myDLX = new DLX(bitmapMatrix)
     val solution = myDLX.solve()
-    ExactCover.mapOutput(U, S, solution)
+    ExactCover.mapOutput(X, S, solution)
   }
 }
 
@@ -47,7 +58,7 @@ object ExactCover {
     * @tparam T type of elements in the universe array
     */
   def mapOutput[T](universe: Array[T], sets: Map[String, Array[T]],
-                   solution: Array[Array[Byte]]) = {
+                   solution: Array[Array[Int]]) = {
     val setsReverseMap = sets.map(_.swap)
     solution.foreach(indexRow => {
       val elementRow = getSubArrayAtIndices(universe, indexRow)

@@ -28,7 +28,7 @@ class DLX(var input: Array[Array[Byte]]) {
 
   // Initialize column headers.
   for (colIndex <- input(0).indices) {
-    val col: Column = new Column(0, colIndex.toByte)
+    val col: Column = new Column(0, colIndex)
     col.L = head.L
     col.R = head
     col.U = col
@@ -204,12 +204,12 @@ class DLX(var input: Array[Array[Byte]]) {
     *
     * @param solution order of nodes to be picked.
     */
-  private def getSolutionAsIndexArrays(solution: ListBuffer[Data]): Array[Array[Byte]] = {
-    var solutionAsIndexLists = Array[Array[Byte]]()
+  private def getSolutionAsIndexArrays(solution: ListBuffer[Data]): Array[Array[Int]] = {
+    var solutionAsIndexLists = Array[Array[Int]]()
     solution.foreach(row => {
       var myCol = row
       var flag = true
-      var indexRow = Array[Byte]()
+      var indexRow = Array[Int]()
       while (flag) {
         indexRow :+= myCol.C.asInstanceOf[Column].N
         if (myCol.R == row)
@@ -223,7 +223,7 @@ class DLX(var input: Array[Array[Byte]]) {
   }
 
   /** Method to search through the possibilities using the DLX structure to return exact cover. */
-  def solve(): Array[Array[Byte]] = {
+  def solve(): Array[Array[Int]] = {
     val curOrder: ListBuffer[Data] = new ListBuffer[Data]()
     val solution: ListBuffer[Data] = new ListBuffer[Data]()
 

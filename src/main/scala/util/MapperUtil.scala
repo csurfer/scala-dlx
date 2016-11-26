@@ -51,7 +51,7 @@ object MapperUtil {
     * @tparam T type of elements in reference array.
     * @return Sub array of elements from refArray
     */
-  def getSubArrayAtIndices[T](refArray: Array[T], indexArray: Array[Byte]) = {
+  def getSubArrayAtIndices[T](refArray: Array[T], indexArray: Array[Int]) = {
     refArray.zipWithIndex.collect({ case (x, i) if indexArray contains i => x })
   }
 }
