@@ -5,7 +5,7 @@ import dlx.node.{Data, Column}
 import scala.collection.mutable.ListBuffer
 
 /** Class implementing Algorithm X using Dancing Links data structure as described in Dancing Links
-  * paper by Prof. Donal Knuth.
+  * paper by Prof. Donald Knuth.
   *
   * Reference : [[https://www.ocf.berkeley.edu/~jchu/publicportal/sudoku/0011047.pdf Dancing Links]]
   *
