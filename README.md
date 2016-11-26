@@ -13,3 +13,4 @@
 
 ## Currently implemented solutions
 - Set exact cover
+- 9x9 Sudoku solver
