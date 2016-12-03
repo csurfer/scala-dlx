@@ -28,8 +28,11 @@ import dlx.DLX
   */
 class Sudoku9x9(grid: Array[Array[Byte]]) {
 
-  /** Method to compute solution to the Sudoku grid given. */
-  def solve() = {
+  /** Method to compute solution to the Sudoku grid given.
+    *
+    * @return Solved grid.
+    */
+  def solve(): Array[Array[Int]] = {
     if (grid.length != 9 || grid(0).length != 9) {
       throw new IllegalArgumentException("Array dimensions should be 9x9")
     }
@@ -38,6 +41,12 @@ class Sudoku9x9(grid: Array[Array[Byte]]) {
     val myDLX = new DLX(bitmapMatrix)
     val solution = myDLX.solve()
     Sudoku9x9.mapOutput(solution)
+  }
+
+  /** Method to compute solution to the Sudoku grid given and print it. */
+  def solveAndPrint() = {
+    val solvedGrid = solve()
+    solvedGrid.foreach(row => println(row.mkString(" ")))
   }
 }
 
@@ -149,8 +158,9 @@ object Sudoku9x9 {
   /** Maps the solution to easily readable output.
     *
     * @param solution provided by AlgorithmX
+    * @return Solved grid.
     */
-  def mapOutput(solution: Array[Array[Int]]) = {
+  def mapOutput(solution: Array[Array[Int]]): Array[Array[Int]] = {
     val solvedGrid = Array.ofDim[Int](9, 9)
     solution.foreach(row => {
       val sortedRow = row.sorted
@@ -158,6 +168,6 @@ object Sudoku9x9 {
       val cellValue: Int = sortedRow(1) - ROW_CONSTRAINT_OFFSET - r * 9 + 1
       solvedGrid(r)(c) = cellValue
     })
-    solvedGrid.foreach(row => println(row.mkString(" ")))
+    solvedGrid
   }
 }

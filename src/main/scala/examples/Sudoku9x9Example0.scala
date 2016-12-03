@@ -15,5 +15,5 @@ object Sudoku9x9Example0 extends App {
       Array[Byte](7,0,3,0,1,8,0,0,0))
 
   val sudokuSolver = new Sudoku9x9(grid)
-  sudokuSolver.solve()
+  sudokuSolver.solveAndPrint()
 }
