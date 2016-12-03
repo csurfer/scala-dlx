@@ -11,7 +11,7 @@ import scala.collection.mutable.ListBuffer
   *
   * @author Vishwas B Sharma (sharma.vishwas88@gmail.com)
   *
-  * @param input Byte array representing the input
+  * @param input Byte array representing the input.
   */
 class DLX(var input: Array[Array[Byte]]) {
   // Validate input array.
