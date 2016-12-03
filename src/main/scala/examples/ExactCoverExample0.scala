@@ -14,5 +14,5 @@ object ExactCoverExample0 extends App {
   )
 
   val exactCover: ExactCover[Int] = new ExactCover[Int](U, S)
-  exactCover.solve()
+  exactCover.solveAndPrint()
 }

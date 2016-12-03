@@ -14,12 +14,21 @@ import dlx.DLX
   */
 class ExactCover[T](X: Array[T], S: Map[String, Array[T]]) {
 
-  /** Method to compute the exact cover for the given set. */
-  def solve() = {
+  /** Method to compute the exact cover for the given set.
+    *
+    * @return Key array of rows to pick.
+    */
+  def solve(): Array[String] = {
     val bitmapMatrix = ExactCover.mapInput(X, S)
     val myDLX = new DLX(bitmapMatrix)
     val solution = myDLX.solve()
     ExactCover.mapOutput(X, S, solution)
+  }
+
+  /** Method to compute the exact cover for the given set and print the solution. */
+  def solveAndPrint() = {
+    val resultSet = solve()
+    println(resultSet.mkString(" "))
   }
 }
 
@@ -56,16 +65,19 @@ object ExactCover {
     * @param sets contender sets used to cover the universe set
     * @param solution provided by AlgorithmX
     * @tparam T type of elements in the universe array
+    * @return Key array of rows to pick.
     */
   def mapOutput[T](universe: Array[T], sets: Map[String, Array[T]],
-                   solution: Array[Array[Int]]) = {
+                   solution: Array[Array[Int]]): Array[String] = {
     val setsReverseMap = sets.map(_.swap)
+    var result = Array[String]()
     solution.foreach(indexRow => {
       val elementRow = getSubArrayAtIndices(universe, indexRow)
       setsReverseMap.foreach(entry => {
         if (entry._1.sameElements(elementRow))
-          print(entry._2 + " ")
+          result :+= entry._2
       })
     })
+    result.sorted
   }
 }
