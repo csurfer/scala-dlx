@@ -1,4 +1,8 @@
 # scala-dlx
+
+[![Build Status](https://travis-ci.org/csurfer/scala-dlx.svg?branch=master)](https://travis-ci.org/csurfer/scala-dlx)
+[![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/csurfer/scala-dlx/master/LICENSE)
+
 **Dancing links(DLX)** based implementation of **AlgorithmX** in **Scala** to solve **Exact Cover** based problems.
 
 ## References
